@@ -23,6 +23,16 @@ resume.prelaodState={
     this.load.image('tree-dark-b','assets/images/tree/tree-dark-b.png');
     this.load.image('tree-dark-c','assets/images/tree/tree-dark-c.png');
     this.load.image('tree-dark-d','assets/images/tree/tree-dark-d.png');
+    this.load.image('welocmeBanner','assets/images/welcome-banner.png');
+    this.load.spritesheet('player','assets/images/player.png',200,220,3);
+    // this.load.image('frontButton','assets/images/front.png');
+    // this.load.image('backButton','assets/images/back.png');
+    this.load.image('sign','assets/images/sign.png');
+    this.load.image('indiaGate','assets/images/india-gate.png');
+    this.load.image('milestone','assets/images/milestone.png');
+    this.load.image('school','assets/images/school.png');
+    this.load.image('result','assets/images/result.png');
+    this.load.image('college','assets/images/college.png');
 
   },
 
