@@ -33,6 +33,9 @@ resume.prelaodState={
     this.load.image('school','assets/images/school.png');
     this.load.image('result','assets/images/result.png');
     this.load.image('college','assets/images/college.png');
+    this.load.image('rightRibbon','assets/images/plant-ribbon-right.png');
+    this.load.image('leftRibbon','assets/images/plant-ribbon-left.png');
+    this.load.image('bird','assets/images/bird.png');
 
   },
 
