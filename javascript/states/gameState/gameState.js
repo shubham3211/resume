@@ -21,6 +21,7 @@ resume.gameState = {
       'nodeJs':'3',
       'c++':'2',
     };
+    this.questionWidth = 120;
 
   },
 
@@ -63,7 +64,11 @@ resume.gameState = {
 
     this.makePlayer();
     this.p=1;
-    this.changePlayerPos(5000);
+
+    this.initQuestions();
+    this.createBlockSeries(7) ;
+
+    // this.changePlayerPos(7000);
 
   },
 
@@ -271,6 +276,38 @@ resume.gameState = {
         birdMove.start();
       }
       no_of_elements--;
+    }
+
+  },
+
+  initQuestions:function () {
+
+    this.questions = this.add.group();
+    this.blocks = this.add.group();
+    this.explosions = this.add.group();
+
+  },
+
+  createBlockSeries:function (no_of_questions) {
+
+    for(let i=1;i<=no_of_questions;i++){
+
+      let blast = new resume.explosion(this.game,this.level2+2000+2*i*this.questionWidth,this.groundLevel-275,this.player);
+      let question = new resume.question(this.game,this.level2+2000+2*i*this.questionWidth,this.groundLevel-275,this.player);
+      question.width = this.questionWidth;
+      this.questions.add(question);
+      this.explosions.add(blast);
+
+    }
+
+    this.game.world.swap(this.explosions,this.questions)
+
+    for(let i=1;i<=no_of_questions+1;i++){
+
+      let block = new resume.blocks(this.game,this.level2+1880+2*i*this.questionWidth,this.groundLevel-275);
+      block.width = this.questionWidth;
+      this.blocks.add(block);
+
     }
 
   }
