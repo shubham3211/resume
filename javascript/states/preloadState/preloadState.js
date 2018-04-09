@@ -38,6 +38,12 @@ resume.prelaodState={
     this.load.image('leftRibbon','assets/images/plant-ribbon-left.png');
     this.load.image('bird','assets/images/bird.png');
     this.load.image('question_block','assets/images/question_block.png');
+    this.load.image('css','assets/images/css.png');
+    this.load.image('angular','assets/images/angularjs.png');
+    this.load.image('html','assets/images/html.png');
+    this.load.image('jquery','assets/images/jquery.png');
+    this.load.image('js','assets/images/js.png');
+    this.load.image('node','assets/images/node.png');
 
   },
 

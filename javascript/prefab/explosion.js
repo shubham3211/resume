@@ -12,8 +12,8 @@ resume.explosion = function (game,x,y,player) {
         this.alpha = 0;
 
     },this)
-    this.width = 180;
-    this.height = 180;
+    this.width = 218;
+    this.height = 218;
 
 };
 

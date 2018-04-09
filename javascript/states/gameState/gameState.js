@@ -22,6 +22,7 @@ resume.gameState = {
       'c++':'2',
     };
     this.questionWidth = 120;
+    this.framework = ['html','css','js','angular','node','jquery']
 
   },
 
@@ -62,13 +63,15 @@ resume.gameState = {
 
     this.makeTable();
 
-    this.makePlayer();
     this.p=1;
 
-    this.initQuestions();
-    this.createBlockSeries(7) ;
+    this.makePlayer();
 
-    // this.changePlayerPos(7000);
+    this.initQuestions();
+    this.createBlockSeries(6) ;
+
+
+    this.changePlayerPos(6500);
 
   },
 
@@ -285,6 +288,7 @@ resume.gameState = {
     this.questions = this.add.group();
     this.blocks = this.add.group();
     this.explosions = this.add.group();
+    this.languageCollection = this.add.group();
 
   },
 
@@ -292,23 +296,30 @@ resume.gameState = {
 
     for(let i=1;i<=no_of_questions;i++){
 
-      let blast = new resume.explosion(this.game,this.level2+2000+2*i*this.questionWidth,this.groundLevel-275,this.player);
-      let question = new resume.question(this.game,this.level2+2000+2*i*this.questionWidth,this.groundLevel-275,this.player);
+      let blast = new resume.explosion(this.game,this.level2+1500+2*i*this.questionWidth,this.groundLevel-275,this.player);
+      let question = new resume.question(this.game,this.level2+1500+2*i*this.questionWidth,this.groundLevel-275,this.player);
+      let language = new resume.language(this.game,this.level2+1500+2*i*this.questionWidth,this.groundLevel-275,this.framework[i-1],this.player);
+      let tree = this.game.add.sprite(this.level2+1500+2*i*this.questionWidth,this.groundLevel-95,'tree-bright-b');
+      tree.anchor.setTo(0.5);
       question.width = this.questionWidth;
       this.questions.add(question);
       this.explosions.add(blast);
+      this.languageCollection.add(language);
+      this.game.world.swap(tree,this.player)
 
     }
 
-    this.game.world.swap(this.explosions,this.questions)
+    this.game.world.swap(this.explosions,this.questions);
 
     for(let i=1;i<=no_of_questions+1;i++){
 
-      let block = new resume.blocks(this.game,this.level2+1880+2*i*this.questionWidth,this.groundLevel-275);
+      let block = new resume.blocks(this.game,this.level2+1380+2*i*this.questionWidth,this.groundLevel-275);
       block.width = this.questionWidth;
       this.blocks.add(block);
 
     }
+
+    this.game.world.swap(this.explosions,this.blocks);
 
   }
 
