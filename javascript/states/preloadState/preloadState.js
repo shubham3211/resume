@@ -25,6 +25,7 @@ resume.prelaodState={
     this.load.image('tree-dark-d','assets/images/tree/tree-dark-d.png');
     this.load.image('welocmeBanner','assets/images/welcome-banner.png');
     this.load.spritesheet('player','assets/images/player.png',200,220,3);
+    this.load.spritesheet('explode','assets/images/explode.png',128,128,16);
     // this.load.image('frontButton','assets/images/front.png');
     // this.load.image('backButton','assets/images/back.png');
     this.load.image('sign','assets/images/sign.png');
@@ -33,6 +34,16 @@ resume.prelaodState={
     this.load.image('school','assets/images/school.png');
     this.load.image('result','assets/images/result.png');
     this.load.image('college','assets/images/college.png');
+    this.load.image('rightRibbon','assets/images/plant-ribbon-right.png');
+    this.load.image('leftRibbon','assets/images/plant-ribbon-left.png');
+    this.load.image('bird','assets/images/bird.png');
+    this.load.image('question_block','assets/images/question_block.png');
+    this.load.image('css','assets/images/css.png');
+    this.load.image('angular','assets/images/angularjs.png');
+    this.load.image('html','assets/images/html.png');
+    this.load.image('jquery','assets/images/jquery.png');
+    this.load.image('js','assets/images/js.png');
+    this.load.image('node','assets/images/node.png');
 
   },
 
