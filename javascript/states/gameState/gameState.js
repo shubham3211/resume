@@ -71,7 +71,7 @@ resume.gameState = {
     this.createBlockSeries(6) ;
 
 
-    this.changePlayerPos(6500);
+    // this.changePlayerPos(6500);
 
   },
 
